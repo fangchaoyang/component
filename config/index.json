@@ -14,7 +14,10 @@
         "./component/select",
         "./component/SliderControlLine",
         "./component/SpreadAnimation",
-        "./component/vue2-slider"
+        "./component/vue2-slider",
+        "./component/buttonPrimary",
+        "./component/buttonArrow",
+        "./component/switch2"
     ]
    
 }
