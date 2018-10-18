@@ -1,0 +1,20 @@
+{
+    "group" : [
+        "UI","组件","布局","Three-Componts"
+    ],
+    "component" : [
+        "./component/button",
+        "./component/counter",
+        "./component/exercise_layout",
+        "./component/fullScreens_layout",
+        "./component/keyFrameAnimation",
+        "./component/leftAndRight_layout",
+        "./component/Line",
+        "./component/ModelAnimationGroup",
+        "./component/select",
+        "./component/SliderControlLine",
+        "./component/SpreadAnimation",
+        "./component/vue2-slider"
+    ]
+   
+}

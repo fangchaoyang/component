@@ -1,0 +1,54 @@
+html{
+    width : 100% ;
+    height : 100% ;
+    overflow: auto;
+    background-color: white ;
+}
+body{
+    width : 100%;
+    height : 100%;
+    background-color: #FAFAFA;
+}
+.h100 {
+    height: 100%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.centerTxt {
+    text-align: center;
+}
+
+.navMenu {
+  /*   background-color: gray; */
+}
+
+.margin0 {
+    margin: 0 !important;
+}
+
+.marginAuto {
+    margin: auto;
+}
+
+.txtNormal {
+    font-weight: normal;
+}
+
+.card-content {
+    padding: 1px;
+}
+
+.component-doc-frame {
+    width: calc( 100% - 3em); 
+    height:calc( 100% - 3.5em);
+    margin: 1.5em;
+}
+
+.component-demo-frame {
+    width:100%;
+    height:100%;
+    display: none
+}

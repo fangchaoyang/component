@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>素材文档</title>
+    <link href="./static/libs/bulma.min.css" rel="stylesheet">
+    <link href="./static/component.css" rel="stylesheet">
+    <link href="./static/default.css" rel="stylesheet">
+    <style>
+        
+    </style>
+  </head>
+  <body style="padding: 0;margin: 0;">
+    <div class="columns  is-gapless h100 margin0">
+        <!-- left menu -->
+        <div class="column navMenu">
+            <p class="subtitle is-3 centerTxt">素材文档</p>
+
+            <div class="field w90 marginAuto">
+                <div class="control">
+                    <input class="input is-small" type="text" placeholder="搜索关键字">
+                </div>
+            </div>
+
+            <aside id="componentMenuSide" class="menu w90 marginAuto">
+                <!-- <p class="menu-label">组件</p>
+                <ul class="menu-list">
+                    <li><a class="is-active">动画组件</a></li>
+                    <li><a>Customers</a></li>
+                </ul> -->
+                 
+            </aside>
+        </div>
+        <!-- content -->
+        <div class="column is-four-fifths">
+                <div class="card h100">
+                        <header class="card-header">
+                                <div id="contentTabs" class="tabs ">
+                                    <ul>
+                                        <li data-target="componentFrame" class="is-active"><a>文档</a></li>
+                                        <li data-target="componentDemo" ><a>demo</a></li>
+                                    </ul>
+                                </div>
+                        </header>
+                        <div id="docContent" class="card-content" style="height: calc( 100% - 42px);overflow-y:auto;">
+                                <iframe id="componentFrame" class="component-frame component-doc-frame" src="./component.html" >
+                                </iframe>
+                                <iframe id="componentDemo"  class="component-frame component-demo-frame" src="" >
+                                </iframe>
+                        </div>
+                        <!-- <footer class="card-footer">
+                          <a href="#" class="card-footer-item">Save</a>
+                          <a href="#" class="card-footer-item">Edit</a>
+                          <a href="#" class="card-footer-item">Delete</a>
+                        </footer> -->
+                </div>
+        </div>  
+      </div>
+
+      <!-- notifaction -->
+      <!-- <div class="notification is-warning">
+            <button class="delete"></button>
+           请再web服务器下访问本项目
+      </div> -->
+
+  </body>
+
+</html>
+<script type="text/javascript" src="./static/libs/axios.min.js"></script>
+<script type="text/javascript" src="./static/libs/markdown-it.min.js"></script>
+<script type="text/javascript" src="./static/libs/highlight.pack.js"></script>
+<script type="text/javascript" src="./static/component.js"></script>
+<script type="text/javascript" src="./static/index.js"></script>
+<script type="text/javascript">
+</script>
