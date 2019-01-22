@@ -2,13 +2,11 @@
  * 素材组件文档类
  * @param {素材组件路径} componentPath 
  */
-var component = function(componentPath){    
+var doc = function(title,docPath){    
 
-  var componentPath;
-  var componentName;
-  var componentConfigPath;
-  var compoenntMDPath;
-  var componentProjectPath;
+  var docTitle;
+  var docPath;
+  
 
   /** 加载组件文档 **/
   function initComponent() {
@@ -18,6 +16,7 @@ var component = function(componentPath){
     .then(function (response) {
       var group = response.data.group;
       var title = response.data.title;
+
       var liNode = document.createElement('li');
       liNode.innerHTML = `<a>${title}</a>`;
       document.querySelector(`[data-component="${group}"]`).appendChild(liNode);
@@ -86,11 +85,8 @@ var component = function(componentPath){
  
 
  function init() {
-    componentPath = componentPath;
-    componentName = componentPath.substring(componentPath.lastIndexOf('/') + 1);
-    componentConfigPath = 'component/' + componentName + '/' + componentName + '.config.json';
-    compoenntMDPath = 'component/' + componentName + '/' + componentName + '.md';
-    componentProjectPath = 'component/' + componentName + '/project/index.html' ;
+    docTitle = title;
+    docPath  = docPath;
     initComponent();
  }
  init();

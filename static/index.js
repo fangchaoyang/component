@@ -6,6 +6,7 @@
   
         initGroup(response.data.group);
         initTabEvent();
+        //初始化所有素材组件
         for(var i = 0 ;i <  response.data.component.length; i++) {
           var componentPath = response.data.component[i];
           component(componentPath);
