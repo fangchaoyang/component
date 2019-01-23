@@ -19,14 +19,14 @@
         "./component/buttonArrow",
         "./component/switch2"
     ],
-    "doc" : [
-        {"tag": "框架",     "path": "./frame.md"},
-        {"tag": "数学",     "path": "./math.md"},
-        {"tag": "three.js", "path": "./threejs.md"},
-        {"tag": "konva.js", "path": "./konvajs.md"},
-        {"tag": "3D模型",   "path": "./3d.md"},
-        {"tag": "JXG",      "path": "./jxg.md"},
-        {"tag": "babylon",  "path": "./babylon.md"}
+    "docs" : [
+        {"tag": "框架",     "path": "./doc/frame.md"},
+        {"tag": "数学",     "path": "./doc/math.md"},
+        {"tag": "three.js", "path": "./doc/threejs.md"},
+        {"tag": "konva.js", "path": "./doc/konvajs.md"},
+        {"tag": "3D模型",   "path": "./doc/3d.md"},
+        {"tag": "JXG",      "path": "./doc/jxg.md"},
+        {"tag": "babylon",  "path": "./doc/babylon.md"}
     ]
    
 }

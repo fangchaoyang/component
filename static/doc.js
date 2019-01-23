@@ -2,7 +2,7 @@
  * 素材组件文档类
  * @param {素材组件路径} componentPath 
  */
-var doc = function(title,docPath){    
+var doc = function(tag,docPath){    
 
   var docTitle;
   var docPath;
@@ -11,22 +11,19 @@ var doc = function(title,docPath){
   /** 加载组件文档 **/
   function initComponent() {
     //组件名称
-   
-    axios.get(componentConfigPath)
-    .then(function (response) {
-      var group = response.data.group;
-      var title = response.data.title;
-
-      var liNode = document.createElement('li');
-      liNode.innerHTML = `<a>${title}</a>`;
-      document.querySelector(`[data-component="${group}"]`).appendChild(liNode);
+     var liNode = document.createElement('li');
+            liNode.innerHTML = `<a>${docTitle}</a>`;
+            document.getElementById('docMenu').appendChild(liNode);
+  
       bindCompentItemClick(liNode);
-    });
   }
 
   function loadComponentMD() {
-    axios.get(compoenntMDPath)
+    console.log('docpath:' + docPath);
+    showProgress(20);
+    axios.get(docPath)
     .then(function (response) {
+      showProgress(60);
       console.log(response);
       var md = window.markdownit({
         html: true,
@@ -46,20 +43,26 @@ var doc = function(title,docPath){
         }
       });
      // var md = new MarkdownIt();
-      var result = md.render(response.data);
+      var result = md.render(response.data +'');
       document.getElementById("componentFrame").contentWindow.document.body.innerHTML = result;
+      showProgress(100);
       //document.getElementById('docContent').innerHTML = result;
-    });
+    }).catch(function (error) { alert('文件读取出错');showProgress(100);});
   }
 
   /** 绑定菜单的点击事件 */
   function bindCompentItemClick(node) {
     node.addEventListener('click', function(e){
+      showProgress(10);
+      document.getElementById("componentFrame").contentWindow.document.body.innerHTML = '';
+      document.getElementById('componentDemo').src ='';
       removeAllActive();
       e.target.classList.add('is-active');
+
       loadComponentMD();
+      
       //点击组件时在全局变量中放入预览路径
-      document.getElementById('componentDemo').src = componentProjectPath;
+      //document.getElementById('componentDemo').src = componentProjectPath;
       //window.componentProjectPath = componentProjectPath;
     });
   }
@@ -85,7 +88,7 @@ var doc = function(title,docPath){
  
 
  function init() {
-    docTitle = title;
+    docTitle = tag;
     docPath  = docPath;
     initComponent();
  }

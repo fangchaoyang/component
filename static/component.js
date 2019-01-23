@@ -26,8 +26,10 @@ var component = function(componentPath){
   }
 
   function loadComponentMD() {
+    showProgress(40);
     axios.get(compoenntMDPath)
     .then(function (response) {
+      showProgress(80);
       console.log(response);
       var md = window.markdownit({
         html: true,
@@ -49,6 +51,7 @@ var component = function(componentPath){
      // var md = new MarkdownIt();
       var result = md.render(response.data);
       document.getElementById("componentFrame").contentWindow.document.body.innerHTML = result;
+      showProgress(100);
       //document.getElementById('docContent').innerHTML = result;
     });
   }
@@ -56,6 +59,8 @@ var component = function(componentPath){
   /** 绑定菜单的点击事件 */
   function bindCompentItemClick(node) {
     node.addEventListener('click', function(e){
+      showProgress(30);
+       document.getElementById("componentFrame").contentWindow.document.body.innerHTML = '';
       removeAllActive();
       e.target.classList.add('is-active');
       loadComponentMD();
