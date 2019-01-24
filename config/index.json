@@ -28,6 +28,7 @@
         {"tag": "JXG",      "path": "./doc/jxg.md"},
         {"tag": "babylon",  "path": "./doc/babylon.md"},
         {"tag": "bodymovin",  "path": "./doc/bodymovin.md"}
+        {"tag": "videojs",  "path": "./doc/videojs.md"}
     ]
    
 }
